@@ -48,9 +48,31 @@ public class AnthServise {
             return resultSet.next();
 
         } catch (SQLException e) {
-            System.out.println("Error : "+e.getMessage());
+            System.out.println("Error : " + e.getMessage());
             return false;
         }
     }
 
+    public static boolean resetPassword(String usernam,String password) {
+        Connection connection = DBconnection.connect();
+
+        String hashedpassword = HashUtil.hashpassword(password);
+
+        String Query = "UPDATE aunthnticat SET password = ? WHERE username = ?";
+         try {
+
+             PreparedStatement preparedStatement = connection.prepareStatement(Query);
+
+             preparedStatement.setString(1,hashedpassword);
+             preparedStatement.setString(2,usernam);
+
+             int affectedRows = preparedStatement.executeUpdate();
+
+             return affectedRows>0;
+
+         } catch (SQLException e) {
+             System.out.println("Error: " + e.getMessage());
+             return false;
+         }
+    }
 }
