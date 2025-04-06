@@ -14,7 +14,7 @@ public class AnthServise {
             preparedStatement.setString(1,username);
             preparedStatement.setString(2,hashedpassword);
             preparedStatement.executeUpdate();
-            return true
+            return true;
         } catch (SQLException e) {
             if (e.getMessage().contains("duplicate key value")) {
                 System.out.println("Username already exists.");
@@ -24,5 +24,6 @@ public class AnthServise {
         }
         return false;
     }
+
 
 }
