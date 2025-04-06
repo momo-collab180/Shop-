@@ -4,7 +4,9 @@ import java.sql.Connection;
 public class AnthServise {
 
     public static boolean register(String username , String password) {
+
         Connection connection = DBconnection.connect();
+
         String hashedpassword = HashUtil.hashpassword(password);
         String Query = "INSERT INTO aunthnticat (username,password)"
                 +"VALUES (?,?)";
@@ -25,6 +27,30 @@ public class AnthServise {
             }
         }
         return false;
+    }
+
+
+    public static boolean login(String username ,String password) {
+
+        Connection connection = DBconnection.connect();
+
+        String hashedpassword = HashUtil.hashpassword(password);
+        String Query = "SELECT FROM aunthnticat WHERE username = ? AND password = ?";
+
+        try {
+
+            PreparedStatement preparedStatement  = connection.prepareStatement(Query);
+
+            preparedStatement.setString(1,username);
+            preparedStatement.setString(2,hashedpassword);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            return resultSet.next();
+
+        } catch (SQLException e) {
+            System.out.println("Error : "+e.getMessage());
+            return false;
+        }
     }
 
 }
