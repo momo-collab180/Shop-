@@ -1,14 +1,16 @@
 import java.sql.*;
+import java.sql.Connection;
 
 public class AnthServise {
 
     public static boolean register(String username , String password) {
-        Connection connection = null;
+        Connection connection = DBconnection.connect();
         String hashedpassword = HashUtil.hashpassword(password);
         String Query = "INSERT INTO aunthnticat (username,password)"
                 +"VALUES (?,?)";
 
-        try {
+        try{
+
             PreparedStatement preparedStatement = connection.prepareStatement(Query);
 
             preparedStatement.setString(1,username);
@@ -24,6 +26,5 @@ public class AnthServise {
         }
         return false;
     }
-
 
 }
