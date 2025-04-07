@@ -36,7 +36,7 @@ public class LoginMenu {
         System.out.println("password : ");
         String password = input.next();
 
-        if (AnthServise.register(username,password)){
+        if (AuthService.register(username,password)){
             System.out.println("Registered successfully.");
 //            Shop_menu
         }else {
@@ -52,7 +52,7 @@ public class LoginMenu {
         System.out.println("password : ");
         String password = input.next();
 
-        if (AnthServise.login(username,password)){
+        if (AuthService.login(username,password)){
             System.out.println("Login successful!");
 //            Shop_menu
         }else {
@@ -68,7 +68,7 @@ public class LoginMenu {
         System.out.println("password : ");
         String password = input.next();
 
-        if (AnthServise.resetPassword(username,password)){
+        if (AuthService.resetPassword(username,password)){
             System.out.println("Password reset successful.");
 //            new LoginMenu();
         }else {

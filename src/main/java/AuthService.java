@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.sql.Connection;
 
-public class AnthServise {
+public class AuthService {
 
     public static boolean register(String username , String password) {
 
