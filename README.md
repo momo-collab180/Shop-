@@ -1,4 +1,4 @@
-# Electrical appliance management program
+# Electrical management program
 
 # Featurs :
   - Sing up
