@@ -21,9 +21,9 @@
   ---> HashUtil.java
   ---> AnthServise.java
 
-                  نحوه اجرا :
-                        از مخزن گیت هاب کلاس ها را استخراج کنید https://github.com/momo-collab180/Shop-.git
-                        با استفاده از postgre SQL دیتابیس خود را بسازید و وصل کنید جدول دارای id , username , password
-                        برنامه رو ران کنید و از طریق کنسول تست ها رو انجام دهید
+        How to run:
+                Extract classes from the GitHub repository  (https://github.com/momo-collab180/Shop-.git)
+                        Create and connect to your database using postgre SQL. Table has id , username , password
+                                  Run the program and perform tests via the console.
 
 mohamad_goreishi
