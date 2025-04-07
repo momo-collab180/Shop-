@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class DBconnection {
 
-    private static final String url ="jdbc:postgresql://localhost:5432/strore_db";
+    private static final String url ="jdbc:postgresql://localhost:5432/store_db";
     private static final String user ="postgres";
     private static final String password ="postgres";
 
