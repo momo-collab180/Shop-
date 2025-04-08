@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class LoginMenu {
@@ -27,6 +28,7 @@ public class LoginMenu {
 
         }
     }
+
 
     public void Sing_up() {
 
