@@ -26,4 +26,4 @@
                         Create and connect to your database using postgre SQL. Table has id , username , password
                                   Run the program and perform tests via the console.
 
-mobin mahmoodian
+mobin mahmoodian.
